@@ -11,10 +11,19 @@
 <body>
 <nav th:fragment="initialNavigation" class="navbar navbar-expand-lg rounded">
     <div class="collapse navbar-collapse" style="float:right;">
-        <a class="nav-item nav-link" href="/index">home</a>
         <a class="nav-item nav-link" href="/login">login</a>
         <a class="nav-item nav-link" href="/register">register</a>
+    </div>
+    <span class="navbar-brand" th:text="${title}" style="float:right;">Todo List Manager</span>
+</nav>
+
+<nav th:fragment="afterNavigation" class="navbar navbar-expand-lg rounded">
+    <div class="collapse navbar-collapse" style="float:right;">
+        <a class="nav-item nav-link" href="/index">home</a>
+        <a class="nav-item nav-link" href="/create/todo-list">create a list</a>
+        <a class="nav-item nav-link" href="/view/all">view all lists</a>
         <a class="nav-item nav-link" href="/logout">logout</a>
+
     </div>
     <span class="navbar-brand" th:text="${title}" style="float:right;">Todo List Manager</span>
 </nav>

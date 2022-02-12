@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class="container-fluid">
+<nav th:replace="fragments :: afterNavigation"></nav>
+<div class="container" style="display:flex;justify-content: center;">
+    <div class="col-lg-8 border border-secondary rounded shadow p-3 mb-5 rounded" style="margin-top:20px;padding:20px;">
+        <small class="text-muted" th:text="'Date Created: ' + ${todoList.formattedDate}"></small>
+        <h1 th:text="${todoList.name}"></h1>
+        <a th:href="@{'/create/task/' + ${todoList.id}}" class="btn btn-sm btn-outline-success" role="button" style="position:absolute;top:0;right:0;margin:5px;">Add Tasks</a>
+        <table class="table" style="table-layout:fixed;width:100%;border-collapse:collapse;">
+            <thead>
+            <tr>
+                <th>Task ID</th>
+                <th>Task Name</th>
+                <th>Description</th>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tr th:each="task : ${tasks}">
+                <td th:text="${task.id}"></td>
+                <td th:text="${task.name}"></td>
+                <td th:text="${task.description}"></td>
+                <td><a th:href="@{'/edit/task/' + ${todoList.id} + '/' + ${task.id}}" class="btn btn-outline-primary">Edit</a></td>
+                <td><a th:href="@{'/delete/task/' + ${todoList.id} + '/' + ${task.id}}" class="btn btn-outline-danger">Delete</a></td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

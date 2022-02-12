@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class="container-fluid">
+<nav th:replace="fragments :: afterNavigation"></nav>
+<div style="display:flex;justify-content:center;align-items:center;margin-top:10%;">
+    <form method="post" action="/create/todo-list">
+        <div class="form-group">
+            <label>Enter a name for the list
+                <input type="text" th:field="${todoList.name}" class="form-control"/>
+            </label>
+            <p class="error text-danger" th:errors="${todoList.name}"></p>
+        </div>
+        <input type="submit" class="btn btn-outline-primary" value="Create List"/>
+    </form>
+</div>
+
+</body>
+</html>

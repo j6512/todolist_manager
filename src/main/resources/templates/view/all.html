@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class="container-fluid">
+<nav th:replace="fragments :: afterNavigation"></nav>
+<div class="row">
+    <th:block th:each="todoList : ${todoLists}">
+        <div class="card shadow p-3 mb-5 rounded" style="width:30%;height:400px;margin:25px;">
+            <div class="card-body text-monospace">
+                <small class="text-muted" th:text="'ID: ' + ${todoList.id}"></small>
+                <a th:text="${todoList.name}" th:href="'/view/todo-list/' + ${todoList.id}" style="display:flex;justify-content:center;align-items:center;margin-top:30%;"></a>
+                <div style="position:absolute;bottom:10px;right:10px;">
+                    <a class="btn btn-sm btn-outline-secondary" th:href="@{'/edit/todo-list/' + ${todoList.id}}">edit list name</a>
+
+                </div>
+                <div style="position:absolute;top:10px;right:10px;">
+                    <a class="btn btn-sm btn-outline-danger" th:href="@{'/delete/todo-list/' + ${todoList.id}}">delete list</a>
+                </div>
+            </div>
+        </div>
+    </th:block>
+</div>
+
+</body>
+</html>

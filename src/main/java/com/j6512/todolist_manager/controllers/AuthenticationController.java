@@ -34,6 +34,10 @@ public class AuthenticationController {
 
         Optional<User> user = userRepository.findById(userId);
 
+        if (user.isEmpty()) {
+            return null;
+        }
+
         return user.get();
     }
 
@@ -121,9 +125,7 @@ public class AuthenticationController {
 
         setUserInSession(request.getSession(), theUser);
 
-        model.addAttribute("loginGreeting", "You have successfully logged in, " + loginFormDTO.getUsername());
-
-        return "index";
+        return "redirect:/index";
     }
 
     @GetMapping("/logout")
