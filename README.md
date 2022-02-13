@@ -1,24 +1,21 @@
 # Todo List Manager
 ## overview
 
-stayfocused is a studying / time management web app that allows Users to create lists that can be filled with tasks to do as well as a countdown timer. The countdown timer can be configured by the User in which they can set a timer for their "study sessions" as well as a timer for their "study breaks". The aim of this web app is to help Users focus on the tasks on their lists and to promote better time management.
+TodoList Manager is a studying / time management web app that allows Users to create lists that can be filled with tasks to do. There is a countdown timer that can be configured by the User in which they can set a timer for their "study sessions" as well as a timer for their "study breaks". The aim of this web app is to help Users focus on the tasks on their lists and to promote better time management.
 
 The idea came from personal experience where I found it difficult to concentrate on a given task without getting side tracked. I found that by breaking up studying sessions into shorter segments followed by a break at the end of each segment, my productivity increased and that I was able to stay focused on what I was currently working on. The purpose of the study breaks is for Users to have something to look forward to after giving their entire attention to the task during their study session. Users are free to do whatever they would like within that study break time frame. Once the break ends, Users can get back to working on their tasks.
 
 ## features
 
-#### user profile creation
+#### user registration
 - Users can register an account and login/logout.
 
-- Users can create/edit a user profile.
+#### todo lists and tasks
+- Users can create/edit/view/delete a list that will be used to store their tasks.
 
-#### task lists and tasks
-- Users can create/edit/delete a list that will be used to store their tasks.
+- Users can create/edit/view/delete their tasks.
 
-- Users can create/edit/delete their tasks.
-
-- Users can create/edit/delete notes that are attached to a specific task.
-
+#### search functionality
 - Users can search for a specific list or task.
 
 #### countdown timer
@@ -40,13 +37,16 @@ The idea came from personal experience where I found it difficult to concentrate
 
 - Bootstrap
 
+- Junit Testing
+
 - HTML/CSS/Javascript
+
 
 ## how to run this repo
 
 1. Clone or download the repo to your machine
 2. Set up a MySQL schema as well as a User with access to that schema
-3. Open the project in your IDE and navigate to stayfocused/src/main/resources/application.properties
+3. Open the project in your IDE and navigate to todolist_manager/src/main/resources/application.properties
 4. Configure and update the top of the file with your username, password, and schema name
  ```
  spring.datasource.url=jdbc:mysql://localhost:3306/schema_name
