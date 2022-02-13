@@ -1,6 +1,7 @@
 package com.j6512.todolist_manager.controllers;
 
 import com.j6512.todolist_manager.models.Task;
+import com.j6512.todolist_manager.models.TaskStatus;
 import com.j6512.todolist_manager.models.TodoList;
 import com.j6512.todolist_manager.models.data.TaskRepository;
 import com.j6512.todolist_manager.models.data.TodoListRepository;
@@ -29,6 +30,7 @@ public class TaskController {
 
         model.addAttribute("title", "Add a Task");
         model.addAttribute("todoList", todoList);
+        model.addAttribute("statuses", TaskStatus.values());
         model.addAttribute(new Task());
 
         return "create/task";
@@ -36,16 +38,19 @@ public class TaskController {
 
     @PostMapping("create/task/{todoListId}")
     public String processTodoListAddTaskForm(@PathVariable int todoListId, @ModelAttribute @Valid Task newTask,
-                                             Errors errors, Model model) {
+                                             Errors errors, Model model,
+                                             @RequestParam TaskStatus status) {
         Optional<TodoList> optionalTodoList = todoListRepository.findById(todoListId);
         TodoList todoList = (TodoList) optionalTodoList.get();
 
         if (errors.hasErrors()) {
+            model.addAttribute("statuses", TaskStatus.values());
             return "create/task";
         }
 
         model.addAttribute("todoList", todoList);
         newTask.setTodoList(todoList);
+        newTask.setStatus(status);
         taskRepository.save(newTask);
 
         model.addAttribute("tasks", todoList.getTasks());
@@ -65,6 +70,7 @@ public class TaskController {
         Task task = (Task) optionalTask.get();
         model.addAttribute("task", task);
 
+        model.addAttribute("statuses", TaskStatus.values());
         model.addAttribute("title", "Edit task: " + task.getName());
 
         return "edit/task";
@@ -73,7 +79,8 @@ public class TaskController {
     @PostMapping("edit/task/{todoListId}/{taskId}")
     public String processTodoListEditForm(@ModelAttribute @Valid Task newTask, Errors errors, Model model,
                                           @PathVariable int todoListId, @PathVariable int taskId,
-                                          @RequestParam String name, @RequestParam String description) {
+                                          @RequestParam String name, @RequestParam String description,
+                                          @RequestParam TaskStatus status) {
 
         Optional<TodoList> optionalTodoList = todoListRepository.findById(todoListId);
         TodoList todoList = (TodoList) optionalTodoList.get();
@@ -83,6 +90,7 @@ public class TaskController {
         if (errors.hasErrors()) {
             model.addAttribute("todoList", todoList);
             model.addAttribute("title", "Edit task: " + optionalTask.get().getName());
+            model.addAttribute("statuses", TaskStatus.values());
 
             return "edit/task";
         }
@@ -90,6 +98,7 @@ public class TaskController {
         newTask = optionalTask.get();
         newTask.setName(name);
         newTask.setDescription(description);
+        newTask.setStatus(status);
         taskRepository.save(newTask);
 
         model.addAttribute("todoList", todoList);

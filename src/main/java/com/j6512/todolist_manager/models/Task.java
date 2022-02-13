@@ -9,6 +9,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Entity
+@AllArgsConstructor
 @Builder
 public class Task extends AbstractEntity {
 
@@ -22,6 +23,8 @@ public class Task extends AbstractEntity {
 
     @ManyToOne
     private TodoList todoList;
+
+    private TaskStatus status;
 
     public Task() {
 
@@ -55,5 +58,13 @@ public class Task extends AbstractEntity {
 
     public void setTodoList(TodoList todoList) {
         this.todoList = todoList;
+    }
+
+    public TaskStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(TaskStatus status) {
+        this.status = status;
     }
 }
