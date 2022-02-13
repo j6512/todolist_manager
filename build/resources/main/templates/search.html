@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class="container-fluid">
+<nav th:replace="fragments :: afterNavigation"></nav>
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-4 card shadow p-3 mb-5 rounded" style="position:fixed;right:10%;padding:20px;padding-bottom:115px;margin-top:20px;">
+            <strong class="d-inline-block mb-2 text-primary">Search</strong>
+            <form method="post">
+                <div class="form-group">
+                    <span>lists
+                        <input type="radio" name="searchType" value="list" checked/>
+                    </span>
+                    <span>tasks
+                        <input type="radio" name="searchType" value="task"/>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="searchTerm" class="form-control"/>
+                </div>
+                <input type="submit" value="Enter" class="btn btn-sm btn-outline-primary" style="position:absolute;bottom:0px;right:10px;"/>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 card shadow p-3 mb-5 rounded" style="left:-10%;padding:20px;padding-bottom:140px;margin-top:20px;">
+            <strong class="d-inline-block mb-2 text-primary">Results</strong>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Todo List ID</th>
+                    <th>Todo List Name</th>
+                    <th>Task Name</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tr th:each="todoList : ${todoLists}">
+                    <td th:text="${todoList.id}"></td>
+                    <td><a th:text="${todoList.name}" th:href="'/view/todo-list/' + ${todoList.id}"></a></td>
+                </tr>
+                <tr th:each="task : ${tasks}">
+                    <td></td>
+                    <td></td>
+                    <td><a th:text="${task.name}" th:href="'/view/todo-list/' + ${task.getTodoList().id}"></a></td>
+                    <td th:text="${task.description}"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>

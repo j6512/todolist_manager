@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository;
 public interface TaskRepository extends CrudRepository<Task, Integer> {
 
     Iterable<Task> getAllTasksByTodoListId(int todo_list_id);
+
+    Task findByName(String name);
 }

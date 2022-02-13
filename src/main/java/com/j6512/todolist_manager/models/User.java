@@ -1,6 +1,8 @@
 package com.j6512.todolist_manager.models;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.persistence.Entity;
@@ -12,6 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@AllArgsConstructor
+@Builder
 public class User extends AbstractEntity {
 
     @Id
@@ -26,6 +30,7 @@ public class User extends AbstractEntity {
 
     private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
+    @Builder.Default
     @OneToMany(mappedBy = "user")
     private List<TodoList> todoLists = new ArrayList<>();
 
@@ -36,11 +41,11 @@ public class User extends AbstractEntity {
         this.passwordHash = encoder.encode(password);
     }
 
-    public User(String username, String password, List<TodoList> todoLists) {
-        this.username = username;
-        this.passwordHash = password;
-        this.todoLists = todoLists;
-    }
+//    public User(String username, String password, List<TodoList> todoLists) {
+//        this.username = username;
+//        this.passwordHash = password;
+//        this.todoLists = todoLists;
+//    }
 
     public String getUsername() {
         return this.username;

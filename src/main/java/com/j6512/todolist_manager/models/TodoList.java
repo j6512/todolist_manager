@@ -1,5 +1,8 @@
 package com.j6512.todolist_manager.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -12,6 +15,8 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
+@AllArgsConstructor
+@Builder
 public class TodoList extends AbstractEntity {
 
     @NotBlank
@@ -24,6 +29,7 @@ public class TodoList extends AbstractEntity {
     @ManyToOne
     private User user;
 
+    @Builder.Default
     @OneToMany(mappedBy = "todoList")
     private List<Task> tasks = new ArrayList<>();
 

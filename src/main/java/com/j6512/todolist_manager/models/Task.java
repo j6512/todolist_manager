@@ -1,11 +1,15 @@
 package com.j6512.todolist_manager.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Entity
+@Builder
 public class Task extends AbstractEntity {
 
     @NotBlank

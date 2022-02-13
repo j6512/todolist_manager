@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TodoListRepository extends CrudRepository<TodoList, Integer> {
+
+    TodoList findByName(String name);
 }
