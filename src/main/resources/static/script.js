@@ -21,46 +21,53 @@ function timer(workSeconds, breakSeconds, repetitions) {
     const workThen = workNow + workSeconds * 1000;
     displayTimeRemaining(workSeconds);
     document.getElementById("message").innerHTML = "start studying now!";
-
     document.getElementById('background').style.backgroundColor = 'ivory';
+
     workCountdown = setInterval(() => {
 
         const workSecondsRemaining = Math.round((workThen - Date.now()) / 1000);
-
-        if (workSecondsRemaining != 0) {
+        console.log("work: " + workSecondsRemaining);
+        if (workSecondsRemaining !== 0) {
             displayTimeRemaining(workSecondsRemaining);
-        } else if (workSecondsRemaining == 0 && !breakSeconds) {
+        } else if (workSecondsRemaining === 0 && !breakSeconds) {
             displayTimeRemaining(workSecondsRemaining);
             clearInterval(workCountdown);
             document.getElementById('background').style.backgroundColor = 'honeydew';
             document.getElementById("message").innerHTML = "studying is now over!";
             return;
-        } else if (workSecondsRemaining == 0) {
+        } else if (workSecondsRemaining === 0) {
             displayTimeRemaining(workSecondsRemaining);
             clearInterval(workCountdown);
+
             // starts the break timer once the working timer reaches 0
             const breakNow = Date.now();
             const breakThen = breakNow + breakSeconds * 1000;
             breakCountdown = setInterval(() => {
                 document.getElementById('background').style.backgroundColor = 'lavender';
+
                 const breakSecondsRemaining = Math.round((breakThen - Date.now()) / 1000) + 1;
-                if (breakSecondsRemaining != 0) {
+                console.log("break: " + breakSecondsRemaining);
+                if (breakSecondsRemaining !== 0) {
                     document.getElementById("message").innerHTML = "take a break!";
                     displayTimeRemaining(breakSecondsRemaining);
-                } else if (breakSecondsRemaining == 0) {
+                } else if (breakSecondsRemaining === 0) {
                     displayTimeRemaining(breakSecondsRemaining);
                     clearInterval(breakCountdown);
+
                     if (repetitionTracker < repetitions) {
                         repetitionTracker++;
                         document.getElementById("currentIteration").innerHTML = repetitionTracker;
-                        timer(workSeconds, breakSeconds, repetitions);
+
+                        setTimeout(function (){
+                            timer(workSeconds, breakSeconds, repetitions);
+                        }, 1000);
                     } else {
                         repetitionTracker = 0;
                         document.getElementById('background').style.backgroundColor = 'honeydew';
                         document.getElementById("message").innerHTML = "studying is now over!";
-                        document.getElementById("currentIteration").innerHTML = "0";
                         displayTimeRemaining(0);
                     }
+
                     return;
                 } else if (breakSecondsRemaining < 0) {
                     clearInterval(workCountdown);
