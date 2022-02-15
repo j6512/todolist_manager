@@ -120,8 +120,4 @@ function startTimer() {
     timer(seconds);
 }
 
-function delay(time) {
-    return new Promise(resolve => setTimeout(resolve, time));
-}
-
 buttons.forEach(button => button.addEventListener('click', startTimer));

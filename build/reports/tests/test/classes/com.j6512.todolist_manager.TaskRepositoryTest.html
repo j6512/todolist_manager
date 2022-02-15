@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.367s</div>
+<div class="counter">0.615s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,12 +79,12 @@
 </thead>
 <tr>
 <td class="success">addTaskTest()</td>
-<td class="success">0.221s</td>
+<td class="success">0.407s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">cleanUp()</td>
-<td class="success">0.021s</td>
+<td class="success">0.026s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -94,7 +94,7 @@
 </tr>
 <tr>
 <td class="success">editTaskTest()</td>
-<td class="success">0.108s</td>
+<td class="success">0.165s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -102,21 +102,21 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>22:25:09.945 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-22:25:09.962 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-22:25:10.016 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.j6512.todolist_manager.TaskRepositoryTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-22:25:10.037 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.j6512.todolist_manager.TaskRepositoryTest], using SpringBootContextLoader
-22:25:10.042 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.j6512.todolist_manager.TaskRepositoryTest]: class path resource [com/j6512/todolist_manager/TaskRepositoryTest-context.xml] does not exist
-22:25:10.043 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.j6512.todolist_manager.TaskRepositoryTest]: class path resource [com/j6512/todolist_manager/TaskRepositoryTestContext.groovy] does not exist
-22:25:10.043 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.j6512.todolist_manager.TaskRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-22:25:10.044 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.j6512.todolist_manager.TaskRepositoryTest]: TaskRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-22:25:10.117 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.j6512.todolist_manager.TaskRepositoryTest]
-22:25:10.202 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/justin/projects/todolist_manager/build/classes/java/main/com/j6512/todolist_manager/TodolistManagerApplication.class]
-22:25:10.206 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.j6512.todolist_manager.TodolistManagerApplication for test class com.j6512.todolist_manager.TaskRepositoryTest
-22:25:10.267 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.j6512.todolist_manager.TaskRepositoryTest]: using defaults.
-22:25:10.267 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-22:25:10.280 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3a62c01e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7a8fa663, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5ce33a58, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@78a287ed, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@546ccad7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5357c287, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1623134f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7a527389, org.springframework.test.context.event.EventPublishingTestExecutionListener@485a3466, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@25748410, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2b43529a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4264b240, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5b04476e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5ad10c1a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6bb75258]
-22:25:10.282 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@6cbcf243 testClass = TaskRepositoryTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@29e6eb25 testClass = TaskRepositoryTest, locations = '{}', classes = '{class com.j6512.todolist_manager.TodolistManagerApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@31ff43be, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6af9fcb2, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1046d517, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5505ae1a, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@3adcc812, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@7b02881e], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+<pre>21:14:58.574 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+21:14:58.582 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+21:14:58.607 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.j6512.todolist_manager.TaskRepositoryTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+21:14:58.619 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.j6512.todolist_manager.TaskRepositoryTest], using SpringBootContextLoader
+21:14:58.621 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.j6512.todolist_manager.TaskRepositoryTest]: class path resource [com/j6512/todolist_manager/TaskRepositoryTest-context.xml] does not exist
+21:14:58.622 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.j6512.todolist_manager.TaskRepositoryTest]: class path resource [com/j6512/todolist_manager/TaskRepositoryTestContext.groovy] does not exist
+21:14:58.622 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.j6512.todolist_manager.TaskRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+21:14:58.622 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.j6512.todolist_manager.TaskRepositoryTest]: TaskRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:14:58.654 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.j6512.todolist_manager.TaskRepositoryTest]
+21:14:58.693 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/justin/projects/todolist_manager/build/classes/java/main/com/j6512/todolist_manager/TodolistManagerApplication.class]
+21:14:58.700 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.j6512.todolist_manager.TodolistManagerApplication for test class com.j6512.todolist_manager.TaskRepositoryTest
+21:14:58.760 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.j6512.todolist_manager.TaskRepositoryTest]: using defaults.
+21:14:58.760 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+21:14:58.773 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3a62c01e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7a8fa663, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5ce33a58, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@78a287ed, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@546ccad7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5357c287, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1623134f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7a527389, org.springframework.test.context.event.EventPublishingTestExecutionListener@485a3466, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@25748410, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2b43529a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4264b240, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5b04476e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5ad10c1a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6bb75258]
+21:14:58.775 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@6cbcf243 testClass = TaskRepositoryTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@29e6eb25 testClass = TaskRepositoryTest, locations = '{}', classes = '{class com.j6512.todolist_manager.TodolistManagerApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@31ff43be, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6af9fcb2, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1046d517, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5505ae1a, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@3adcc812, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@7b02881e], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -126,21 +126,21 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.6.3)
 
-2022-02-12 22:25:10.478  INFO 26383 --- [    Test worker] c.j.todolist_manager.TaskRepositoryTest  : Starting TaskRepositoryTest using Java 17.0.1 on Justins-MBP with PID 26383 (started by justin in /Users/justin/projects/todolist_manager)
-2022-02-12 22:25:10.479  INFO 26383 --- [    Test worker] c.j.todolist_manager.TaskRepositoryTest  : No active profile set, falling back to default profiles: default
-2022-02-12 22:25:11.104  INFO 26383 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-02-12 22:25:11.189  INFO 26383 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 3 JPA repository interfaces.
-2022-02-12 22:25:11.769  INFO 26383 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-02-12 22:25:11.858  INFO 26383 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
-2022-02-12 22:25:12.115  INFO 26383 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-02-12 22:25:12.186  INFO 26383 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-02-12 22:25:12.434  INFO 26383 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-02-12 22:25:12.444  INFO 26383 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-02-12 22:25:13.129  INFO 26383 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-02-12 22:25:13.134  INFO 26383 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-02-12 22:25:13.584  WARN 26383 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-02-12 22:25:13.816  INFO 26383 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-02-12 22:25:14.041  INFO 26383 --- [    Test worker] c.j.todolist_manager.TaskRepositoryTest  : Started TaskRepositoryTest in 3.735 seconds (JVM running for 5.037)
+2022-02-13 21:14:58.975  INFO 28626 --- [    Test worker] c.j.todolist_manager.TaskRepositoryTest  : Starting TaskRepositoryTest using Java 17.0.1 on Justins-MBP with PID 28626 (started by justin in /Users/justin/projects/todolist_manager)
+2022-02-13 21:14:58.976  INFO 28626 --- [    Test worker] c.j.todolist_manager.TaskRepositoryTest  : No active profile set, falling back to default profiles: default
+2022-02-13 21:14:59.455  INFO 28626 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-13 21:14:59.495  INFO 28626 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.
+2022-02-13 21:15:00.175  INFO 28626 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-13 21:15:00.274  INFO 28626 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-02-13 21:15:00.508  INFO 28626 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-02-13 21:15:00.685  INFO 28626 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-13 21:15:01.275  INFO 28626 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-13 21:15:01.311  INFO 28626 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-02-13 21:15:02.448  INFO 28626 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-13 21:15:02.453  INFO 28626 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-13 21:15:02.982  WARN 28626 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-13 21:15:03.826  INFO 28626 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-02-13 21:15:04.082  INFO 28626 --- [    Test worker] c.j.todolist_manager.TaskRepositoryTest  : Started TaskRepositoryTest in 5.284 seconds (JVM running for 6.252)
 </pre>
 </span>
 </div>
@@ -152,7 +152,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at Feb 12, 2022, 10:25:14 PM</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at Feb 13, 2022, 9:15:04 PM</p>
 </div>
 </div>
 </body>

@@ -18,10 +18,6 @@ import java.util.List;
 @Builder
 public class User extends AbstractEntity {
 
-    @Id
-    @GeneratedValue
-    private int id;
-
     @NotNull
     private String username;
 
@@ -51,9 +47,7 @@ public class User extends AbstractEntity {
         return this.username;
     }
 
-    public int getId() {
-        return this.id;
-    }
+
 
     public boolean isMatchingPassword(String password) {
         return encoder.matches(password, passwordHash);
